@@ -17,9 +17,13 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <Icon name="GraduationCap" className="w-8 h-8 text-primary" />
-            <span className="text-primary my-[29px] mx-2 py-0 font-semibold text-base">Херсонский государственный 
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/files/f70aa338-53d6-49e0-9463-64cee1c1e047.png" 
+              alt="Логотип ХГПУ"
+              className="w-12 h-12 object-contain"
+            />
+            <span className="text-primary font-semibold text-base">Херсонский государственный 
 педагогический университет</span>
           </div>
 
