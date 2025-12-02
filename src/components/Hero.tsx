@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const Hero = () => {
   return (
@@ -7,6 +8,8 @@ const Hero = () => {
       id="home"
       className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white py-20 md:py-32"
     >
+      <ParticlesBackground />
+      
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
