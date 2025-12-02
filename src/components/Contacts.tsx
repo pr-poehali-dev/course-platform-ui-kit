@@ -9,7 +9,7 @@ const Contacts = () => {
     {
       icon: "MapPin",
       title: "Адрес",
-      content: "г. Херсон, ул. Университетская, 27",
+      content: "г. Скадовск, ул. Покровская 7а",
     },
     {
       icon: "Phone",
