@@ -141,7 +141,7 @@ const Contacts = () => {
 
         <div className="mt-12 rounded-xl overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.8429473925447!2d32.61503431572914!3d46.63533997913111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c41aa7c1c0d717%3A0x7f6a1b3e8c8a3f7b!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgtGB0LrQsNGPINGD0LsuLCAyNywg0KXQtdGA0YHQvtC9LCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LsuLCA3MzAwMA!5e0!3m2!1sru!2sua!4v1615825923123!5m2!1sru!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.234567891234!2d33.0782!3d46.1189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5b3f8e9d0f1a1%3A0x1234567890abcdef!2z0YPQuy4g0J_QvtC60YDQvtCy0YHQutCw0Y8sIDfQsCwg0KHQutCw0LTQvtCy0YHQuiwg0KXQtdGA0YHQvtC90YHQutCw0Y8g0L7QsdC7LiwgNzUwMDA!5e0!3m2!1sru!2sua!4v1234567890123!5m2!1sru!2sua"
             width="100%"
             height="400"
             style={{ border: 0 }}
