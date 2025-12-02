@@ -19,7 +19,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Icon name="GraduationCap" className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold text-primary">EduPlatform</span>
+            <span className="text-primary my-[29px] mx-2 py-0 font-semibold text-base">Херсонский государственный 
+педагогический университет</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
