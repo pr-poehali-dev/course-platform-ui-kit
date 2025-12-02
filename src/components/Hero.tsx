@@ -43,8 +43,8 @@ const Hero = () => {
 
           <div className="hidden lg:block animate-scale-in">
             <img
-              src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/f62d1555-ee05-4a76-9260-dcc5ba1f72e5.jpg"
-              alt="Образование"
+              src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/ace7724b-1e7d-41fa-8f02-9b671bf74b49.jpg"
+              alt="Счастливые студенты"
               className="rounded-2xl shadow-2xl"
             />
           </div>
