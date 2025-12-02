@@ -12,6 +12,22 @@ const Hero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
       </div>
 
+      <div className="absolute top-10 right-20 opacity-20 animate-float hidden xl:block">
+        <img
+          src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/aed39833-f1ea-4925-958e-d33efaae7d22.jpg"
+          alt="Декоративный элемент"
+          className="w-32 h-32 object-contain"
+        />
+      </div>
+
+      <div className="absolute bottom-20 left-10 opacity-20 animate-float-delayed hidden xl:block">
+        <img
+          src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/7d982e69-0081-4df9-9909-06064f9fb8c1.jpg"
+          alt="Декоративный элемент"
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
@@ -41,12 +57,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block animate-scale-in">
-            <img
-              src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/ace7724b-1e7d-41fa-8f02-9b671bf74b49.jpg"
-              alt="Счастливые студенты"
-              className="rounded-2xl shadow-2xl"
-            />
+          <div className="hidden lg:block animate-scale-in relative">
+            <div className="relative">
+              <img
+                src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/b7265a06-5454-4ccf-9c1a-a0af5b59878f.jpg"
+                alt="Образовательная иллюстрация"
+                className="rounded-2xl w-full relative z-10"
+              />
+              <div className="absolute -bottom-6 -right-6 w-full h-full bg-accent/30 rounded-2xl"></div>
+              <div className="absolute -top-6 -left-6 w-full h-full bg-white/10 rounded-2xl"></div>
+            </div>
           </div>
         </div>
       </div>
