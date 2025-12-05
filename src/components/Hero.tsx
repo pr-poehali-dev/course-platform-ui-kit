@@ -52,7 +52,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary"
+                className="border-2 border-white text-cyan-300 hover:bg-white hover:text-primary"
               >
                 <Icon name="BookOpen" className="mr-2" />
                 Каталог курсов
