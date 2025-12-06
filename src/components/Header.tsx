@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
@@ -6,18 +7,18 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Главная", href: "#home" },
-    { label: "Каталог курсов", href: "#catalog" },
-    { label: "Преподаватели", href: "#teachers" },
-    { label: "О нас", href: "#about" },
-    { label: "Контакты", href: "#contacts" },
+    { label: "Главная", href: "/" },
+    { label: "Каталог курсов", href: "/#catalog" },
+    { label: "Преподаватели", href: "/#teachers" },
+    { label: "О нас", href: "/#about" },
+    { label: "Контакты", href: "/#contacts" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img 
               src="https://cdn.poehali.dev/files/f70aa338-53d6-49e0-9463-64cee1c1e047.png" 
               alt="Логотип ХГПУ"
@@ -25,7 +26,7 @@ const Header = () => {
             />
             <span className="text-primary font-semibold text-base">Херсонский государственный 
 педагогический университет</span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
@@ -40,9 +41,12 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Войти
-            </Button>
+            <Link to="/dashboard">
+              <Button variant="ghost" size="sm">
+                <Icon name="User" size={16} className="mr-2" />
+                Личный кабинет
+              </Button>
+            </Link>
             <Button size="sm" className="bg-accent hover:bg-accent/90">
               Регистрация
             </Button>
@@ -70,9 +74,12 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t">
-                <Button variant="ghost" size="sm">
-                  Войти
-                </Button>
+                <Link to="/dashboard">
+                  <Button variant="ghost" size="sm" className="w-full">
+                    <Icon name="User" size={16} className="mr-2" />
+                    Личный кабинет
+                  </Button>
+                </Link>
                 <Button size="sm" className="bg-accent hover:bg-accent/90">
                   Регистрация
                 </Button>
