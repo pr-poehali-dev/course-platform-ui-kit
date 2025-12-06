@@ -87,7 +87,7 @@ const Hero = () => {
           <div className="hidden lg:block animate-scale-in relative">
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/f97ddb5c-5eca-4a84-a657-08359a2eb635/files/b7265a06-5454-4ccf-9c1a-a0af5b59878f.jpg"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
                 alt="Образовательная иллюстрация"
                 className="rounded-2xl w-full relative z-10"
               />
