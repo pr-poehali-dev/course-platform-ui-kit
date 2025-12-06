@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import CartButton from "./CartButton";
+import RegistrationModal from "./RegistrationModal";
 import { useState } from "react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showRegistration, setShowRegistration] = useState(false);
 
   const navItems = [
     { label: "Главная", href: "/" },
@@ -49,7 +51,11 @@ const Header = () => {
                 Личный кабинет
               </Button>
             </Link>
-            <Button size="sm" className="bg-accent hover:bg-accent/90">
+            <Button 
+              size="sm" 
+              className="bg-accent hover:bg-accent/90"
+              onClick={() => setShowRegistration(true)}
+            >
               Регистрация
             </Button>
           </div>
@@ -82,7 +88,11 @@ const Header = () => {
                     Личный кабинет
                   </Button>
                 </Link>
-                <Button size="sm" className="bg-accent hover:bg-accent/90">
+                <Button 
+                  size="sm" 
+                  className="bg-accent hover:bg-accent/90"
+                  onClick={() => setShowRegistration(true)}
+                >
                   Регистрация
                 </Button>
               </div>
@@ -90,6 +100,11 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      <RegistrationModal 
+        open={showRegistration} 
+        onOpenChange={setShowRegistration} 
+      />
     </header>
   );
 };

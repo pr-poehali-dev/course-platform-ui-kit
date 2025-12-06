@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import RegistrationModal from "@/components/RegistrationModal";
 
 const Hero = () => {
+  const [showRegistration, setShowRegistration] = useState(false);
   return (
     <section
       id="home"
@@ -64,6 +67,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all"
+                onClick={() => setShowRegistration(true)}
               >
                 <Icon name="UserPlus" className="mr-2" />
                 Регистрация
@@ -93,6 +97,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <RegistrationModal 
+        open={showRegistration} 
+        onOpenChange={setShowRegistration} 
+      />
     </section>
   );
 };
