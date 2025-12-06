@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ interface CourseCardProps {
   price: string;
   image: string;
   badge?: "Новый" | "Популярный";
+  id?: string;
 }
 
 const CourseCard = ({
@@ -25,6 +27,7 @@ const CourseCard = ({
   price,
   image,
   badge,
+  id = "graphic-design-basics",
 }: CourseCardProps) => {
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
@@ -80,10 +83,12 @@ const CourseCard = ({
 
       <CardFooter className="flex items-center justify-between border-t pt-4">
         <div className="text-2xl font-bold text-primary">{price}</div>
-        <Button size="sm" className="bg-primary hover:bg-primary/90">
-          Подробнее
-          <Icon name="ArrowRight" size={16} className="ml-1" />
-        </Button>
+        <Link to={`/course/${id}`}>
+          <Button size="sm" className="bg-primary hover:bg-primary/90">
+            Подробнее
+            <Icon name="ArrowRight" size={16} className="ml-1" />
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
