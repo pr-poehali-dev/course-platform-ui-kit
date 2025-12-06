@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import PricingModal from "./PricingModal";
 
 interface CourseCardProps {
   title: string;
@@ -29,7 +31,16 @@ const CourseCard = ({
   badge,
   id = "graphic-design-basics",
 }: CourseCardProps) => {
+  const [showPricing, setShowPricing] = useState(false);
+
   return (
+    <>
+      <PricingModal 
+        open={showPricing}
+        onOpenChange={setShowPricing}
+        courseTitle={title}
+        basePrice={price}
+      />
     <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
       <div className="relative overflow-hidden">
         <img
@@ -83,14 +94,25 @@ const CourseCard = ({
 
       <CardFooter className="flex items-center justify-between border-t pt-4">
         <div className="text-2xl font-bold text-primary">{price}</div>
-        <Link to={`/course/${id}`}>
-          <Button size="sm" className="bg-primary hover:bg-primary/90">
-            Подробнее
-            <Icon name="ArrowRight" size={16} className="ml-1" />
+        <div className="flex gap-2">
+          <Button 
+            size="sm" 
+            variant="outline"
+            onClick={() => setShowPricing(true)}
+          >
+            <Icon name="ShoppingCart" size={16} className="mr-1" />
+            Купить
           </Button>
-        </Link>
+          <Link to={`/course/${id}`}>
+            <Button size="sm" className="bg-primary hover:bg-primary/90">
+              Подробнее
+              <Icon name="ArrowRight" size={16} className="ml-1" />
+            </Button>
+          </Link>
+        </div>
       </CardFooter>
     </Card>
+    </>
   );
 };
 

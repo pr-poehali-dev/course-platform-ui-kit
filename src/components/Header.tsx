@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import CartButton from "./CartButton";
 import { useState } from "react";
 
 const Header = () => {
@@ -40,7 +41,8 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2">
+            <CartButton />
             <Link to="/dashboard">
               <Button variant="ghost" size="sm">
                 <Icon name="User" size={16} className="mr-2" />

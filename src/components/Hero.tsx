@@ -34,28 +34,48 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Образование нового поколения
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              Дополнительное профессиональное образование
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl">
-              Откройте для себя мир знаний с нашими экспертными курсами. 
-              Обучайтесь в удобном темпе и развивайте навыки будущего.
-            </p>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              ФГБОУ ВО "ХГПУ"
+            </h2>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/20">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                <div className="flex items-start gap-2">
+                  <Icon name="CheckCircle" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                  <span>Онлайн обучение</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Icon name="FileCheck" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                  <span>Внесение в ФИС ФРДО</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Icon name="Award" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                  <span>Диплом / Удостоверение</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Icon name="GraduationCap" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                  <span>Для лиц с СПО/ВО</span>
+                </div>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all"
               >
-                <Icon name="PlayCircle" className="mr-2" />
-                Начать обучение
+                <Icon name="UserPlus" className="mr-2" />
+                Регистрация
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-cyan-300 hover:bg-white hover:text-primary"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary"
+                onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Icon name="BookOpen" className="mr-2" />
-                Каталог курсов
+                <Icon name="Search" className="mr-2" />
+                Поиск курсов
               </Button>
             </div>
           </div>

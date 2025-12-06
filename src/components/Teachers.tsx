@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
+import TeacherModal from "./TeacherModal";
 
 const Teachers = () => {
+  const [selectedTeacher, setSelectedTeacher] = useState<typeof teachers[0] | null>(null);
   const teachers = [
     {
       name: "Анна Петрова",
@@ -141,6 +144,16 @@ const Teachers = () => {
                     <Icon name="Mail" size={16} />
                   </a>
                 </div>
+
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full mt-4"
+                  onClick={() => setSelectedTeacher(teacher)}
+                >
+                  Подробнее
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
+                </Button>
               </div>
             </div>
           ))}
@@ -153,6 +166,14 @@ const Teachers = () => {
           </Button>
         </div>
       </div>
+
+      {selectedTeacher && (
+        <TeacherModal 
+          open={!!selectedTeacher}
+          onOpenChange={(open) => !open && setSelectedTeacher(null)}
+          teacher={selectedTeacher}
+        />
+      )}
     </section>
   );
 };
