@@ -86,11 +86,27 @@ const Hero = () => {
 
           <div className="hidden lg:block animate-scale-in relative">
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
-                alt="Образовательная иллюстрация"
-                className="rounded-2xl w-full relative z-10"
-              />
+              <div className="rounded-2xl w-full relative z-10 bg-white/10 backdrop-blur-sm p-12 flex items-center justify-center">
+                <svg viewBox="0 0 400 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="200" cy="120" r="40" fill="#F4A261" opacity="0.9"/>
+                  <rect x="160" y="170" width="80" height="100" rx="5" fill="#FFFFFF" opacity="0.95"/>
+                  <circle cx="140" cy="300" r="35" fill="#E9C46A" opacity="0.8"/>
+                  <rect x="115" y="340" width="50" height="55" rx="5" fill="#FFFFFF" opacity="0.95"/>
+                  <circle cx="260" cy="300" r="35" fill="#E76F51" opacity="0.8"/>
+                  <rect x="235" y="340" width="50" height="55" rx="5" fill="#FFFFFF" opacity="0.95"/>
+                  <rect x="80" y="200" width="240" height="3" rx="1.5" fill="#FFFFFF" opacity="0.6"/>
+                  <circle cx="100" cy="100" r="15" fill="#2A9D8F" opacity="0.7"/>
+                  <rect x="90" y="118" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.9"/>
+                  <circle cx="300" cy="100" r="15" fill="#264653" opacity="0.7"/>
+                  <rect x="290" y="118" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.9"/>
+                  <path d="M 180 80 L 200 60 L 220 80" fill="none" stroke="#F4A261" strokeWidth="3" opacity="0.8"/>
+                  <circle cx="200" cy="55" r="8" fill="#F4A261" opacity="0.9"/>
+                  <rect x="60" y="150" width="40" height="30" rx="3" fill="#E9C46A" opacity="0.6"/>
+                  <rect x="300" y="150" width="40" height="30" rx="3" fill="#2A9D8F" opacity="0.6"/>
+                  <path d="M 50 250 Q 70 240 90 250" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity="0.5"/>
+                  <path d="M 310 250 Q 330 240 350 250" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity="0.5"/>
+                </svg>
+              </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-accent/30 rounded-2xl"></div>
               <div className="absolute -top-6 -left-6 w-full h-full bg-white/10 rounded-2xl"></div>
             </div>
